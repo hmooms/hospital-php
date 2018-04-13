@@ -5,8 +5,10 @@
     <h1>Patienten</h1>
 
     <ul>
+
         <li><a href={{ url('./clients')}}>clienten</a></li>
         <li><a href={{ url('./species')}}>diersoorten</a></li>
+        
     </ul>
 
     @if(count($patients) > 0)
