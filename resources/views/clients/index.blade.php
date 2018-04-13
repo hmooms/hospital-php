@@ -8,7 +8,7 @@
 
         <li><a href={{ url('./patients')}}>patienten</a></li>
         <li><a href={{ url('./species')}}>diersoorten</a></li>
-        
+
     </ul>
 
     @if(count($clients) > 0)
@@ -62,74 +62,3 @@
     <a href={{ url('/clients/create')}} class="btn btn-success">Client toevoegen</a>
 
 @endsection
-
-<script> 
-    
-    //------Ask for confirmation------\\
-
-    function confirmDelete()
-    {
-        var result = confirm('Weet je zeker dat je deze client wilt verwijderen? Als er een patient bestaat met deze client wordt die ook verwijderd.');
-
-        if (result)
-            return true;
-        else 
-            return false;
-    }
-
-    // ------Sort table------ \\
-
-    function sortTable(n)
-    {
-        var table, rows, switching, i, x, y, shouldSwitch, dir, switchCount = 0; 
-        
-        table = document.getElementsByClassName('table')[0];
-        switching = true;
-        dir = "asc";
-        
-        while (switching) {
-
-            switching = false;
-
-            rows = table.getElementsByTagName('tr');
-
-            for(i = 1; i < (rows.length - 1); i++) {
-
-                shouldSwitch = false;
-
-                x = rows[i].getElementsByTagName('td')[n]
-                y = rows[i + 1].getElementsByTagName('td')[n];
-
-                if (dir == "asc") {
-
-                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-
-                        shouldSwitch = true;
-                        break;
-                    }
-                } else if (dir == "desc") {
-
-                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()){
-
-                        shouldSwitch = true;
-                        break;
-                    }
-                }
-            }
-            if (shouldSwitch) {
-
-                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                switching = true;
-
-                switchCount++;
-            }   else {
-
-                if (switchCount == 0 && dir == "asc") {
-
-                    dir = "desc";
-                    switching = true;
-                } 
-            }
-        }   
-    }
-</script>
