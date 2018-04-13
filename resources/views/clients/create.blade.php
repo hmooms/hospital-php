@@ -42,7 +42,7 @@
 
         {{Form::submit('creëren', ['class' => 'btn btn-primary'])}}
 
-        <a href="/Hospital/public/clients" class="btn btn-danger">annuleren</a> 
+        <a href={{ url('./clients')}} class="btn btn-danger">annuleren</a> 
 
     {!!Form::close() !!}
 

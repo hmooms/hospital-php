@@ -5,8 +5,8 @@
     <h1>Diersoorten</h1>
 
     <ul>
-        <li><a href="/Hospital/public/patients">patienten</a></li>
-        <li><a href="/Hospital/public/clients">clienten</a></li>
+        <li><a href={{ url('./patients')}}>patienten</a></li>
+        <li><a href={{ url('./clients')}}>clienten</a></li>
     </ul></h1>
 
     @if(count($species) > 0)
@@ -53,7 +53,7 @@
         <p>Geen diersoorten</p>
     @endif
 
-    <a href="/Hospital/public/species/create" class="btn btn-success">Diersoort toevoegen</a>
+    <a href={{ url('/species/create')}} class="btn btn-success">Diersoort toevoegen</a>
 @endsection
 
 <script> 

@@ -5,8 +5,8 @@
     <h1>Clienten</h1>
 
     <ul>
-        <li><a href="/Hospital/public/patients">patienten</a></li>
-        <li><a href="/Hospital/public/species">diersoorten</a></li>
+        <li><a href={{ url('./patients')}}>patienten</a></li>
+        <li><a href={{ url('./species')}}>diersoorten</a></li>
     </ul>
 
     @if(count($clients) > 0)
@@ -57,7 +57,7 @@
         <p>Geen clienten</p>
     @endif
 
-    <a href="/Hospital/public/clients/create" class="btn btn-success">Client toevoegen</a>
+    <a href={{ url('/clients/create')}} class="btn btn-success">Client toevoegen</a>
 
 @endsection
 

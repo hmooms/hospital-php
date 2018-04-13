@@ -22,7 +22,7 @@
         
         {{Form::select('species', $data[1], $patient->species_id, ['class' => 'form-control', 'placeholder' => 'Kies een diersoort'])}}
 
-        <a href="/Hospital/public/species/create"><h4>+diersoort toevoegen</h4></a>
+        <a href={{ url('./species/create')}}><h4>+diersoort toevoegen</h4></a>
     
     </div>
 
@@ -56,7 +56,7 @@
 
         {{Form::select('client', $data[0], $patient->client_id, ['class' => 'form-control', 'placeholder' => 'kies een client'])}}
 
-        <a href="/Hospital/public/clients/create"><h4>+cliënt toevoegen</h4></a>
+        <a href={{ url('./clients/create')}}><h4>+cliënt toevoegen</h4></a>
 
     </div>
 
@@ -71,7 +71,7 @@
 
     {{Form::submit('wijzigen', ['class' => 'btn btn-primary'])}}
 
-    <a href="/Hospital/public/patients" class="btn btn-danger">annuleren</a> 
+    <a href={{ url('./patients')}} class="btn btn-danger">annuleren</a> 
 
 {!! Form::close() !!}
 

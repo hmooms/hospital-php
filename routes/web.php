@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+route::get('/', function(){
+    return view('welcome');
+});
+
 
 route::resource('/patients', 'PatientsController');
 route::resource('/clients', 'ClientsController');

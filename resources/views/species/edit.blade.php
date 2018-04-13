@@ -20,7 +20,7 @@
         
         {{Form::submit('wijzigen', ['class' => 'btn btn-primary'])}}
 
-        <a href="/Hospital/public/species" class="btn btn-danger">annuleren</a>
+        <a href={{ url('./species')}} class="btn btn-danger">annuleren</a>
 
     {!! Form::close() !!}
 
