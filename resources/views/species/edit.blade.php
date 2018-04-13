@@ -12,7 +12,7 @@
             
             {{Form::label('species_D', 'Diersoort:')}}
 
-            {{Form::text('species_D', '', ['class' => 'form-control', 'placeholder' => 'Diersoort'])}}    
+            {{Form::text('species_D', $species->species_description, ['class' => 'form-control', 'placeholder' => 'Diersoort'])}}    
 
         </div>
 
