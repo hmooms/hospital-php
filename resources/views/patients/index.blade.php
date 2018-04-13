@@ -36,7 +36,7 @@
                     <td>{{$patient->patient_gender}}</td>
                     <td>{{$patient->patient_status}}</td>
                     <td>{{$patient->client_firstname}} {{$patient->client_lastname}}</td>
-                    <td><a class="btn btn-info" href="/Hospital/public/patients/{{$patient->patient_id}}/edit">wijzig</a></td>
+                    <td><a class="btn btn-info" href="/Hospital/patients/{{$patient->patient_id}}/edit">wijzig</a></td>
                     <td>
                         {!!Form::open(['action' => ['PatientsController@destroy', $patient->patient_id], 'method' => 'POST', 'onSubmit' => 'return confirmDelete()'])!!}
 

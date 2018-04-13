@@ -34,7 +34,7 @@
                     <td>{{$client->client_lastname}}</td>
                     <td>{{$client->phone}}</td>
                     <td>{{$client->email}}</td>
-                    <td><a class="btn btn-info" href="/Hospital/public/clients/{{$client->client_id}}/edit">wijzig</a></td>
+                    <td><a class="btn btn-info" href="/Hospital/clients/{{$client->client_id}}/edit">wijzig</a></td>
                     <td>
                     
                         {!!Form::open(['action' => ['ClientsController@destroy', $client->client_id], 'method' => 'POST', 'onSubmit' => 'return confirmDelete()'])!!}

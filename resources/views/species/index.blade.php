@@ -30,7 +30,7 @@
                 <tr>
                     <td>{{$specie->species_id}}</td>
                     <td>{{$specie->species_description}}</td>
-                    <td><a class="btn btn-info" href="/Hospital/public/species/{{$specie->species_id}}/edit">wijzig</a></td>
+                    <td><a class="btn btn-info" href="/Hospital/species/{{$specie->species_id}}/edit">wijzig</a></td>
                     <td>
 
                         {!!Form::open(['action' => ['SpeciesController@destroy', $specie->species_id], 'method' => 'POST', 'onSubmit' => 'return confirmDelete()'])!!}
