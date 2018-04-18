@@ -61,4 +61,20 @@
 
     <a href={{ url('/clients/create')}} class="btn btn-success">Client toevoegen</a>
 
+    <script>
+    
+        //------Ask for confirmation------\\
+        
+        function confirmDelete()
+        {
+            var result = confirm('Weet je zeker dat je deze client wilt verwijderen? Als er een patient bestaat met deze client wordt die ook verwijderd.');
+    
+            if (result)
+                return true;
+            else 
+                return false;
+        }
+        
+    </script>
+
 @endsection

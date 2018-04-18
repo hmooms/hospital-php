@@ -56,4 +56,22 @@
     @endif
 
     <a href={{ url('/species/create')}} class="btn btn-success">Diersoort toevoegen</a>
+
+    <script>
+    
+    //------Ask for confirmation------\\
+    
+    function confirmDelete()
+    {
+        var result = confirm('Weet je zeker dat je dit diersoort wilt verwijderen? Als er een patient bestaat met dit diersoort wordt die ook verwijderd.');
+
+        if (result)
+            return true;
+        else 
+            return false;
+    }
+    
+    </script>
 @endsection
+
+

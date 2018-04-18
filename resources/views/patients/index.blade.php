@@ -61,5 +61,21 @@
     @endif
 
     <a href={{ url('patients/create')}} class="btn btn-success">creër een patient</a>
+
+    <script>
+    
+        //------Ask for confirmation------\\
+        
+        function confirmDelete()
+        {
+            var result = confirm('Weet je zeker dat je deze patient wilt verwijderen?');
+    
+            if (result)
+                return true;
+            else 
+                return false;
+        }
+        
+    </script>
 @endsection
 
